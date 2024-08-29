@@ -32,10 +32,10 @@
                 </template>
 
                 <div class="thumbs">
-                    <div class="prev" @click="activeImg == 0 ? activeImg = slides.length - 1 : activeImg-- "></div>
+                    <div class="prev" @click="activeImg == 0 ? activeImg = slides.length - 1 : activeImg--"></div>
                     <div class="next" @click="activeImg < slides.length - 1 ? activeImg++ : activeImg = 0"></div>
                     <template v-for="thumb, thumbIndex in slides">
-                        <div class="thumb" :class="thumbIndex == activeImg ? 'active' : ''">
+                        <div class="thumb" @click="activeImg == thumbIndex; console.log(activeImg, thumbIndex)" :class="thumbIndex == activeImg ? 'active' : ''">
                             <img :src="thumb.image" :alt="thumb.title"/>
                         </div>
                     </template>

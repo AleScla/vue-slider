@@ -27,7 +27,7 @@ createApp({
             }
         ],
         activeImg: 0,
-        activeThumb:0,
+        activeThumb:'',
     }
 }
 }).mount('#app')
